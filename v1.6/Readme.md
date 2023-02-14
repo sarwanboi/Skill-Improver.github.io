@@ -5,7 +5,7 @@
 
 ## Download Now 
 ### File: skill_improver_setup.exe
-### File Link: https://sarwanboi.github.io/skill_improver.github.io//v1.6/skill_improver_setup.exe
+### File Link: https://skill-improver.me/redic/download/skill_improver_setup.exe
 
 ### Aplication Previews
 ![Screenshot 2023-01-29 225613](https://user-images.githubusercontent.com/92580571/215346185-8aa458d0-1f93-4141-ab5a-43cb1d13209a.jpg)
