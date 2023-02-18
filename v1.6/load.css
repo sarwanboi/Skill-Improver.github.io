@@ -1,5 +1,5 @@
 body {
-  background: #eaecfa;
+  background: #d2aeea;
 }
 
 .loader {
@@ -25,7 +25,7 @@ body {
   display: block;
   width: 15px;
   height: 15px;
-  background: #fff;
+  background: #8a75e7;
   position: absolute;
   -webkit-animation: load 0.8s infinite alternate ease-in-out;
   animation: load 0.8s infinite alternate ease-in-out;

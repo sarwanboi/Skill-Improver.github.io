@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #0f72e5;
+    background-color: #eaecfa;
 }
 .popup{
     background-color: #ffffff;
@@ -37,14 +37,19 @@ body{
     margin: 20px 0;
     line-height: 25px;
 }
+h2{
+    color:#8a75e7
+}
 a{
     display: block;
-    width: 150px;
+    width: 180px;
     position: relative;
     margin: 10px auto;
     text-align: center;
-    background-color: #0f72e5;
+    background-color:#8a75e7;
     color: #ffffff;
     text-decoration: none;
-    padding: 5px 0;
+    padding: 8px 0;
+    border: #8a75e7;
+    border-radius: 50px;
 }
