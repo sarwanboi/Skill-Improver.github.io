@@ -1,0 +1,13 @@
+Talking About : HTTTP and urllib
+
+Both requests and urllib are Python modules that can be used to send HTTP requests and handle responses. However, there are some differences between them:
+
+Ease of use: requests is generally considered to be easier to use than urllib. It provides a simpler and more intuitive API, with fewer details to worry about. In contrast, urllib can be more complex and harder to understand, especially for beginners.
+
+Functionality: requests provides a more comprehensive set of HTTP request/response handling functions and features than urllib. For example, requests supports features like sessions, authentication, redirects, and multipart file uploads, while urllib provides a more basic set of functions for sending HTTP requests and handling responses.
+
+Code readability: Code written using requests can be more readable and concise than code using urllib, due to its simpler API and more intuitive syntax. This can make it easier for developers to write and maintain their code.
+
+External dependencies: requests is a third-party module that needs to be installed separately, while urllib is part of the Python standard library and does not require any external dependencies. However, this also means that urllib may not be as frequently updated or maintained as requests.
+
+Overall, requests is a popular and widely-used module that provides a simpler and more comprehensive API for sending HTTP requests and handling responses. It can be a good choice for developers who want to write concise and readable code, and who need more advanced features like session handling and authentication. On the other hand, urllib may be a better choice for developers who want to stick with the Python standard library and who only need basic HTTP request/response handling features.
