@@ -1,4 +1,4 @@
-###              Sarwan
+###              Sarwan Yadav
 
 <div align="center">
       <h1> <img src="https://skill-improver.me/skill.ico" width="80px"><br/>Skill Improver</h1>
