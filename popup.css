@@ -10,13 +10,9 @@ body {
     background-color: #0f72e5;
 }
 
-i {
-    text-align: left;
-}
-
 .popup {
     background-color: #ffffff;
-    width: 450px;
+    width:380px;
     padding: 30px 40px;
     position: absolute;
     transform: translate(-50%, -50%);
