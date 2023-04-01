@@ -33,7 +33,7 @@ Skill Improver is a user-friendly application designed to enhance your typing sk
       
 # How To Install?:
 
-### You can add How to Setup:
+### Steps To Download:
 
 - Go to the Skill Improver website and download the installation file for Windows.
 
