@@ -1,87 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-PR45HCH');</script>
-    <!-- Google tag (gtag.js) -->
-    <script async
-      src="https://www.googletagmanager.com/gtag/js?id=G-CSFTZX2DFX"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Download Our App</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f2f2f2;
+    }
 
-    gtag('config', 'G-CSFTZX2DFX');
-  </script>
-    <script src="https://www.googleoptimize.com/optimize.js?id=OPT-PLNR4J2"></script>
-    <!-- End Google Tag Manager -->
-    <title>Download Our App</title>
-  </head>
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 15px;
+      color: #000000
+    }
 
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-PR45HCH" height="0"
-        width="0"
-        style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    .card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.9);
+      /* slight transparency */
+      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      /* blur effect */
+      -webkit-backdrop-filter: blur(10px);
+      /* for Safari support */
+      transition: all 0.5s ease;
+    }
 
-    <div class="container mt-5" id="container">
-      <h1 class="text-center mb-5">Download Our App</h1>
-      <div class="row">
-        <div class="col-md-6 offset-md-3">
-          <div class="card">
-            <div class="card-header">
-              Version Information
-            </div>
-            <div class="card-body">
-              <p><strong>Version:</strong> 1.2</p>
-              <p><strong>Release Date:</strong> June 26, 2022</p>
-              <p><strong>File Size:</strong> 10 MB</p>
-            </div>
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 40px rgba(90, 137, 246, 0.2);
+    }
+
+
+
+    .card-header {
+      background-color: #fff;
+      color: #818084;
+      padding: 10px;
+    }
+
+    #download {
+      position: relative;
+    }
+
+    #download .btn {
+      padding: 15px 40px;
+      font-size: 18px;
+      border-radius: 30px;
+      transition: all 0.5s ease;
+    }
+
+    #download .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 40px rgba(90, 137, 246, 0.2);
+    }
+  </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>Download Our App</title>
+
+</head>
+
+<body>
+  <div class="container mt-5" id="container">
+    <h1 class="text-center mb-5">Download Our App</h1>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card">
+          <div class="card-header">
+            Version Information
           </div>
-          <div class="card mt-4">
-            <div class="card-header">
-              About This Version
-            </div>
-            <div class="card-body">
-              <p>Thank you for downloading version <b>1.2</b> of our app! This
-                update includes bug fixes that address
-                issues reported by our users</p>
-              <p>We hope you enjoy using our app and welcome any feedback you
-                may have!</p>
-            </div>
+          <div class="card-body">
+            <p>
+              <strong>Version:</strong> 1.2
+            </p>
+            <p>
+              <strong>Release Date:</strong> June 26, 2022
+            </p>
+            <p>
+              <strong>File Size:</strong> 10 MB
+            </p>
           </div>
-          <div class="text-center mt-4 mb-5" id="download">
-            <a
-              href="https://skill-improver.me/download_file/v1.2/Skill_Improver_v1.2.exe"
-              class="btn btn-primary">Download App</a>
+        </div>
+        <div class="card mt-4">
+          <div class="card-header">
+            About This Version
           </div>
+          <div class="card-body">
+            <p>Thank you for downloading version
+              <b>1.2</b>
+              of our app! This
+              update includes bug fixes that address
+              issues reported by our users
+            </p>
+            <p>
+              We hope you enjoy using our app and welcome any feedback you
+              may have!
+            </p>
+          </div>
+        </div>
+        <div class="text-center mt-4 mb-5" id="download">
+          <a href="https://skill-improver.me/download_file/v1.2/Skill_Improver_v1.2.exe"
+            class="btn btn-primary">Download App</a>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- jQuery and Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script>
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
     // Animate the container
     gsap.from("#container", {
       opacity: 0,
@@ -108,6 +144,6 @@
       delay: 0.8,
     });
   </script>
-  </body>
+</body>
 
 </html>
