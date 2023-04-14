@@ -23,6 +23,7 @@ self.addEventListener('install', event => {
     caches.open(CACHE_NAME)
       .then(cache => cache.addAll(urlsToCache))
       .then(() => self.skipWaiting())
+      .catch(error => console.log('Error adding to cache:', error))
   );
 });
 
