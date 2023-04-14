@@ -1,20 +1,26 @@
 {
-    "name": "Skill Improver",
-    "short_name": "Skill Improver",
-    "description": "Skill Improver is a cutting-edge application designed to help you enhance your typing skills and increase your typing speed. Whether you're a beginner or an experienced typist, this app is perfect for 
-    anyone looking to improve their typing abilities. With its easy-to-use interface, Skill Improver provides a comprehensive platform for users to practice and refine their typing skills through a series of exercises 
-    and challenges.This innovative app is designed to adapt to your personal needs and preferences, providing a customized experience that caters to your individual skill level. By tracking your progress and analyzing 
-    your typing patterns, Skill Improver can provide valuable insights and feedback to help you improve your typing speed and accuracy over time. With regular use, this app can help you achieve your typing goals and 
-    become a faster and more efficient typist. So, if you're looking to take your typing skills to the next level, use Skill Improver today and start practicing!",
-    "icons": [
-      {
-        "src": "skill.ico",
-        "sizes": "128x128",
-        "type": "image/x-icon"
-      }
-    ],
-    "start_url": "skill-improver.me/",
-    "background_color": "#ffffff",
-    "theme_color": "#ffffff"
-  }
-  
+  "name": "Skill Improver",
+  "short_name": "Skill Improver",
+  "description": "Enhance your typing skills and increase your speed with Skill Improver - an easy-to-use, cutting-edge application designed for beginners and experienced typists alike. Practice and refine your skills through personalized exercises and challenges, with valuable insights and feedback to help you improve over time. Start achieving your typing goals today with Skill Improver.",
+  "icons": [
+    {
+      "src": "skill-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "skill-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "skill-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "https://skill-improver.me/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}

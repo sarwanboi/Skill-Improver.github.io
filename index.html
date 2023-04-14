@@ -8,6 +8,7 @@
     Practice and refine your skills through personalized exercises and challenges, with valuable insights and feedback to help you improve over time. Start achieving your typing goals today with Skill Improver.">
 <meta name="keywords" content="skill improvement, learning, development, Sarwan Yadav">
 <meta name="author" content="Sarwan Yadav">
+<meta name="theme-color" content="#RRGGBB">
 <!-- Google Tag Manager -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSFTZX2DFX"></script>
@@ -21,7 +22,7 @@
 <script src="https://www.googleoptimize.com/optimize.js?id=OPT-PLNR4J2"></script>
 <!-- End Google Tag Manager -->
 <link rel="canonical" href="https://www.skill-improver.me">
-<link rel="stylesheet" href="files\preloader.css">
+<link rel="stylesheet" href="files/preloader.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="icon" type="image/x-icon" href="skill.ico">
@@ -307,6 +308,18 @@
                 index = (index + 1) % words.length;
             }, 5200);
         </script>
+        <script>
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', function() {
+                navigator.serviceWorker.register('files/service-worker.js').then(function(registration) {
+                  console.log('Service worker registered with scope:', registration.scope);
+                }, function(err) {
+                  console.log('Service worker registration failed:', err);
+                });
+              });
+            }
+        </script>
+            
     </body>
 
 </html>

@@ -7,6 +7,7 @@
     Practice and refine your skills through personalized exercises and challenges, with valuable insights and feedback to help you improve over time. Start achieving your typing goals today with Skill Improver.">
     <meta name="keywords" content="skill improvement, learning, development, Sarwan Yadav">
 	<meta name="author" content="Sarwan Yadav">
+    <meta name="theme-color" content="#RRGGBB">
     <!-- Google Tag Manager -->
     <!-- Google tag (gtag.js) -->
     <script async
@@ -341,6 +342,17 @@
                 changingText.textContent = text;
                 index = (index + 1) % words.length;
             }, 5200);
+        </script>
+        <script>
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', function() {
+                navigator.serviceWorker.register('files/service-worker.js').then(function(registration) {
+                  console.log('Service worker registered with scope:', registration.scope);
+                }, function(err) {
+                  console.log('Service worker registration failed:', err);
+                });
+              });
+            }
         </script>
     </body>
 
