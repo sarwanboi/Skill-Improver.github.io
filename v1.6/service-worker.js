@@ -14,7 +14,8 @@ const filesToCache = [
   'screenshots/3',
   'screenshots/4',
   'screenshots/5',
-  'screenshots/6'
+  'screenshots/6',
+  'https://mdbcdn.b-cdn.net/img/new/slides/003.webp' // Add this line
 ];
 
 self.addEventListener('install', function(event) {
@@ -27,10 +28,3 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        return response || fetch(event.request);
-      })
-  );
-});
