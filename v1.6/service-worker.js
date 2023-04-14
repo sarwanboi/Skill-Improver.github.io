@@ -9,12 +9,12 @@ const urlsToCache = [
   '/files/v1.2.6.8.html',
   '/files/v1.6.html',
   '/files/v1.8.html',
-  '/screenshots/1',
-  '/screenshots/2',
-  '/screenshots/3',
-  '/screenshots/4',
-  '/screenshots/5',
-  '/screenshots/6',
+  '/screenshots/1.png',
+  '/screenshots/2.png',
+  '/screenshots/3.png',
+  '/screenshots/4.png',
+  '/screenshots/5.png',
+  '/screenshots/6.png',
   'https://mdbcdn.b-cdn.net/img/new/slides/003.webp',
   '/404.html',
   '/offline.html'
@@ -25,7 +25,9 @@ self.addEventListener('install', event => {
     caches.open(CACHE_NAME)
       .then(cache => cache.addAll(urlsToCache))
       .then(() => self.skipWaiting())
-      .catch(error => console.log('Error adding to cache:', error))
+      .catch(error => {
+        console.error('Failed to add URLs to cache:', error);
+      })
   );
 });
 
