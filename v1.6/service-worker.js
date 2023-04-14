@@ -15,7 +15,9 @@ const urlsToCache = [
   '/screenshots/4',
   '/screenshots/5',
   '/screenshots/6',
-  'https://mdbcdn.b-cdn.net/img/new/slides/003.webp'
+  'https://mdbcdn.b-cdn.net/img/new/slides/003.webp',
+  '/404.html',
+  '/offline.html'
 ];
 
 self.addEventListener('install', event => {
