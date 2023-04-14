@@ -245,6 +245,16 @@
                 </div>
             </div>
         </section>
+
+        <div class="loader-wrapper">
+            <div class="loader"></div>
+        </div>
+
+        <div class="success-message">
+            <i class="fas fa-check-circle"></i>
+            <p>Your message has been sent successfully.</p>
+        </div>
+
         <footer class="bg-dark text-center text-white">
             <div class="container p-4 pb-0">
                 <section class="mb-4">
@@ -271,6 +281,9 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <!-- Font Awesome JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+            integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
             integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
             crossorigin="anonymous"></script>
@@ -328,6 +341,23 @@
                         });
                 });
             }
+        </script>
+        <script>
+            const form = document.querySelector('.contact-form form');
+            const loaderWrapper = document.querySelector('.loader-wrapper');
+            const successMessage = document.querySelector('.success-message');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                loaderWrapper.style.display = 'flex';
+                setTimeout(() => {
+                    loaderWrapper.style.display = 'none';
+                    successMessage.style.display = 'flex';
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 3000);
+                }, 3000);
+            });
         </script>
     </body>
 
