@@ -3,7 +3,6 @@ const filesToCache = [
   '/',
   '/index.html',
   '/preloader.css',
-  'service-worker.js',
   'img/skill.png',
   'img/6139.jpg',
   'files/v1.2.html',

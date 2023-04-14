@@ -19,7 +19,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "https://skill-improver.me/",
+  "start_url": "https://skill-improver.netlify.app/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff"
