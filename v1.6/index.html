@@ -136,7 +136,7 @@
             <div class="container">
                 <h2 class="mb-4">Screenshots</h2>
                 <div class="row">
-                    <div class="col-md-4" style="margin-bottom: 30px;">
+                    <div class="col-md-3" style="margin-bottom: 30px;">
                         <div class="card screenshot-card">
                             <img src="screenshots\1.png" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -144,58 +144,73 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4" style="margin-bottom: 30px;">
+                    <div class="col-md-3" style="margin-bottom: 30px;">
                         <div class="card screenshot-card">
                             <img src="screenshots\2.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <p class="card-text">Home</p>
+                                <p class="card-text"><i class="fa fa-home" aria-hidden="true"></i> Home</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3" style="margin-bottom: 30px;">
                         <div class="card screenshot-card">
                             <img src="screenshots\3.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <p class="card-text">
-                                    Home: Dodger Blue - Theme
-                                    Selected
+                                    Word Challenge: Screen
                                 </p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div style="height: 50px;"></div>
-                <div class="row">
-                    <div class="col-md-4" style="margin-bottom: 30px;">
+                    <div class="col-md-3" style="margin-bottom: 30px;">
                         <div class="card screenshot-card">
                             <img src="screenshots\4.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <p class="card-text">About Application Page</p>
+                                <p class="card-text"> Word Challenge: <i class="fa fa-history" aria-hidden="true"></i> History Panel</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4" style="margin-bottom: 30px;">
+                </div>
+                <div class="row">
+                    <div class="col-md-3" style="margin-bottom: 30px;">
                         <div class="card screenshot-card">
                             <img src="screenshots\5.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <p class="card-text">History Panel</p>
+                                <p class="card-text"><i class="fas fa-paragraph"></i> Paragraph Challenge: Screen</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3" style="margin-bottom: 30px;">
                         <div class="card screenshot-card">
                             <img src="screenshots\6.png" class="card-img-top" alt="...">
                             <div class="card-body">
+                                <p class="card-text"><i class="fas fa-paragraph"></i> Paragraph Challenge: <i class="fa fa-history" aria-hidden="true"></i> History Viewer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="margin-bottom: 30px;">
+                        <div class="card screenshot-card">
+                            <img src="screenshots\7.png" class="card-img-top" alt="...">
+                            <div class="card-body">
                                 <p class="card-text">
-                                    Check For Update: Inbuilt
-                                    System
+                                    <i class="fa fa-info-circle"></i> About Section: <i class="fa fa-home" aria-hidden="true"></i> Home
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card screenshot-card">
+                            <img src="screenshots\8.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <i class="fa fa-refresh" aria-hidden="true"></i> Update Utility: Inbuilted
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section> 
         <section id="download" class="container">
             <h1 class="mt-3">Download</h1>
             <p class="lead">Get a previous version of Skill Improver by using the buttons below.</p>
@@ -271,6 +286,15 @@
             </div>
         </div>
     </section>
+    <div class="popup-container">
+        <div class="popup-content">
+          <h2>New version available!</h2>
+          <p>Click the button below to download the new version "V2.0" of our Skill Improver.</p>
+          <a href="https://skill-improver.me/files/v2.0.html" class="btn">Download new version</a>
+          <button class="close-btn">&times;</button>
+        </div>
+    </div>
+      
     <div class="loader-wrapper">
         <div class="loader"></div>
     </div>
@@ -387,6 +411,18 @@
                         successMessage.style.display = 'none';
                     }, 3000);
                 }, 3000);
+            });
+            const popupContainer = document.querySelector('.popup-container');
+            const closeBtn = document.querySelector('.close-btn');
+
+            window.onload = function() {
+            setTimeout(function() {
+                popupContainer.style.display = 'block';
+            }, 5000); // Display popup after 5 seconds
+            };
+
+            closeBtn.addEventListener('click', function() {
+            popupContainer.style.display = 'none';
             });
     </script>
 </body>
