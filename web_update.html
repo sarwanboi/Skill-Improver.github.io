@@ -26,6 +26,12 @@
     </p>
   </div>
   </footer>
+  <script>
+    // Clear localStorage before closing the website
+    window.addEventListener('beforeunload', function () {
+      window.localStorage.clear();
+    });
+  </script>
 </body>
 
 </html>

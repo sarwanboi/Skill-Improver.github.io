@@ -55,6 +55,11 @@
   </div>
   <!-- Bootstrap JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+  <script>
+  // Clear localStorage before closing the website
+    window.addEventListener('beforeunload', function() {
+      window.localStorage.clear();
+    });
+  </script>
 </body>
-
 </html>

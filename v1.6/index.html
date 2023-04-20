@@ -471,6 +471,10 @@
             document.addEventListener("contextmenu", function (e) {
                 e.preventDefault();
             }, false);
+            // Clear localStorage before closing the website
+            window.addEventListener('beforeunload', function() {
+            window.localStorage.clear();
+            });
         </script>
     </body>
 

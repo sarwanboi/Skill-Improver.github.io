@@ -13,7 +13,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="common.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
- <!-- Google Tag Manager -->
+  <!-- Google Tag Manager -->
   <!-- Google Tag Manager -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSFTZX2DFX"></script>
@@ -102,6 +102,12 @@
       ease: "power2.out",
       stagger: 0.2,
       delay: 0.8,
+    });
+  </script>
+  <script>
+    // Clear localStorage before closing the website
+    window.addEventListener('beforeunload', function () {
+      window.localStorage.clear();
     });
   </script>
 </body>
