@@ -233,31 +233,38 @@ footer {
 }
 
 .popup-container {
-  display: none; /* hides the container by default */
+  display: none;
+  /* hides the container by default */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* adds a semi-transparent black overlay */
-  z-index: 999; /* ensures that the container is above other elements */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* adds a semi-transparent black overlay */
+  z-index: 999;
+  /* ensures that the container is above other elements */
 }
 
 .popup-content {
-  position: absolute; /* positions the content inside the container */
+  position: absolute;
+  /* positions the content inside the container */
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* centers the content vertically and horizontally */
+  transform: translate(-50%, -50%);
+  /* centers the content vertically and horizontally */
   max-width: 90%;
   padding: 2rem;
   background-color: white;
   border-radius: 0.5rem;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* adds a shadow to the content */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  /* adds a shadow to the content */
 }
 
 .close-btn {
-  position: absolute; /* positions the close button inside the content */
+  position: absolute;
+  /* positions the close button inside the content */
   top: 1rem;
   right: 1rem;
   font-size: 2rem;
@@ -265,13 +272,16 @@ footer {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  color: #333; /* sets the color of the close button */
-  transition: color 0.3s ease; /* adds a color transition */
+  color: #333;
+  /* sets the color of the close button */
+  transition: color 0.3s ease;
+  /* adds a color transition */
 }
 
 .close-btn:hover,
 .close-btn:focus {
-  color: red; /* changes the color of the close button on hover/focus */
+  color: red;
+  /* changes the color of the close button on hover/focus */
   outline: none;
 }
 
