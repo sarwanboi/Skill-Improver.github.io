@@ -2,26 +2,30 @@ const CACHE_NAME = "my-app-cache-v1";
 const urlsToCache = [
   "/",
   "/index.html",
-  "/preloader.css",
-  "/img/skill.png",
-  "/img/6139.jpg",
+  "files/preloader.css",
+  "files/img/skill.png",
+  "files/img/6139.jpg",
+  "files/img/skill-128.png",
+  "files/img/skill-192.png",
+  "files/img/skill-512.png",
   "/files/v1.2.html",
+  "/img/skill.ico",
   "/files/v1.2.6.8.html",
   "/files/v1.6.html",
   "/files/v1.8.html",
   "/files/v2.0.html",
   "/files/v2.2.html",
-  "/screenshots/1.png",
-  "/screenshots/2.png",
-  "/screenshots/3.png",
-  "/screenshots/4.png",
-  "/screenshots/5.png",
-  "/screenshots/6.png",
-  "/screenshots/7.png",
-  "/screenshots/8.png",
+  "files/screenshots/1.png",
+  "files/screenshots/2.png",
+  "files/screenshots/3.png",
+  "files/screenshots/4.png",
+  "files/screenshots/5.png",
+  "files/screenshots/6.png",
+  "files/screenshots/7.png",
+  "files/screenshots/8.png",
   "https://mdbcdn.b-cdn.net/img/new/slides/003.webp",
-  "/404.html",
-  "/offline.html",
+  "files/offline.html",
+  "files/offline.html",
 ];
 
 self.addEventListener("install", (event) => {
@@ -59,7 +63,7 @@ self.addEventListener("fetch", (event) => {
       return fetch(event.request)
         .then((response) => {
           if (response.status === 404) {
-            return caches.match("/404.html");
+            return caches.match("/files/404.html");
           }
           return caches.open(CACHE_NAME).then((cache) => {
             cache.put(event.request.url, response.clone());
@@ -67,7 +71,7 @@ self.addEventListener("fetch", (event) => {
           });
         })
         .catch(() => {
-          return caches.match("/offline.html");
+          return caches.match("/files/offline.html");
         });
     })
   );

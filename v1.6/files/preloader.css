@@ -232,35 +232,67 @@ footer {
   animation-fill-mode: forwards;
 }
 
-
 .popup-container {
-  display: none;
+  display: none; /* hides the container by default */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7); /* adds a semi-transparent black overlay */
+  z-index: 999; /* ensures that the container is above other elements */
 }
 
 .popup-content {
-  position: absolute;
+  position: absolute; /* positions the content inside the container */
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* centers the content vertically and horizontally */
+  max-width: 90%;
   padding: 2rem;
   background-color: white;
   border-radius: 0.5rem;
   text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* adds a shadow to the content */
 }
 
 .close-btn {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  position: absolute; /* positions the close button inside the content */
+  top: 1rem;
+  right: 1rem;
   font-size: 2rem;
   font-weight: bold;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  color: #333; /* sets the color of the close button */
+  transition: color 0.3s ease; /* adds a color transition */
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: red; /* changes the color of the close button on hover/focus */
+  outline: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #0069d9;
+  outline: none;
+}
+
+.btn:active {
+  background-color: #005cbf;
 }

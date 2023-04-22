@@ -1,20 +1,20 @@
 {
   "name": "Skill Improver",
   "short_name": "Skill Improver",
-  "description": "Enhance your typing skills and increase your speed with Skill Improver - an easy-to-use, cutting-edge application designed for beginners and experienced typists alike. Practice and refine your skills through personalized exercises and challenges, with valuable insights and feedback to help you improve over time. Start achieving your typing goals today with Skill Improver.",
+  "description": "Enhance your typing skills and increase your speed with Skill Improver - an easy-to-use, cutting-edge application designed for beginners and experienced typists alike.",
   "icons": [
     {
-      "src": "skill-128.png",
+      "src": "files/img/skill-128.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "skill-192.png",
+      "src": "files/img/skill-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "skill-512.png",
+      "src": "files/img/skill-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
