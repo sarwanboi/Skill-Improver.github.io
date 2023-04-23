@@ -16,6 +16,7 @@ const urlsToCache = [
   "/files/v1.8.html",
   "/files/v2.0.html",
   "/files/v2.2.html",
+  "/files/v2.0.0.4.html",
   "files/screenshots/1.png",
   "files/screenshots/2.png",
   "files/screenshots/3.png",
