@@ -47,6 +47,7 @@
             <div></div>
         </div>
     </div>
+    <button id="scrollBtn"><i class="fas fa-chevron-down"></i></button>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PR45HCH" height="0" width="0"
@@ -102,7 +103,8 @@
                     <div class="col-mt-8 mx-auto">
                         <h2>Introducing Our Skill Improver</h2>
 
-                        <p class="py-4" style="font-size: 1.1rem; line-height: 1.5; color: #444; padding-top: 1.5rem; padding-bottom: 1.5rem;">
+                        <p class="py-4"
+                            style="font-size: 1.1rem; line-height: 1.5; color: #444; padding-top: 1.5rem; padding-bottom: 1.5rem;">
                             Skill Improver is a revolutionary new typingapplication that can help you improve your
                             typing speed and accuracy. It features a range of fun and engaging typing exercises, as well
                             as real-time feedback on your progress. Whether you're a beginner or an experienced typist,
@@ -125,7 +127,8 @@
                             and hard work, he has created an app that is both user-friendly and effective, offering a
                             fun and engaging way for users to practice and improve their typing skills.
                         </p>
-                        <p class="mt-4" style="font-size: 1.1rem;line-height: 1.5;color: #444;margin-top: 1.5rem; margin-bottom: 2.8rem;">
+                        <p class="mt-4"
+                            style="font-size: 1.1rem;line-height: 1.5;color: #444;margin-top: 1.5rem; margin-bottom: 2.8rem;">
                             As a student himself, Sarwan understands the importance of developing skills that can help
                             you succeed in today's fast-paced world. With Skill Improver, he aims to provide a tool that
                             can help people of all ages and backgrounds improve their typing skills and gain a
@@ -479,6 +482,41 @@
             window.addEventListener('beforeunload', function () {
                 window.localStorage.clear();
             });
+            const scrollBtn = document.querySelector('#scrollBtn');
+
+            window.addEventListener('scroll', () => {
+                // Show the button when user scrolls down 20% of the viewport height
+                if (window.scrollY > window.innerHeight * 0.2) {
+                    scrollBtn.style.display = 'block';
+                } else {
+                    scrollBtn.style.display = 'none';
+                }
+
+                // Change the button icon to "up" when user scrolls down and to "down" when user scrolls up
+                if (window.scrollY + window.innerHeight >= document.body.scrollHeight) {
+                    scrollBtn.classList.add('up');
+                } else {
+                    scrollBtn.classList.remove('up');
+                }
+            });
+
+            scrollBtn.addEventListener('click', () => {
+                // Scroll to the bottom of the page if the button is in "down" state
+                if (!scrollBtn.classList.contains('up')) {
+                    window.scrollTo({
+                        top: document.body.scrollHeight,
+                        behavior: 'smooth'
+                    });
+                }
+                // Scroll to the top of the page if the button is in "up" state
+                else {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+
         </script>
     </body>
 
