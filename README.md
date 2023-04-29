@@ -1,7 +1,7 @@
 ### Sarwan Yadav
 
 <div align="center">
-      <h1> <img src="https://skill-improver.me/skill.ico" width="80px"><br/>Skill Improver</h1>
+      <h1> <img src="https://skill-improver.me/files/img/skill.ico" width="80px"><br/>Skill Improver</h1>
      </div>
 <p align="center"> <a href="https://skill-improver.me/" target="_blank"><img alt="" src="https://img.shields.io/badge/Website-EA4C89?style=normal&logo=dribbble&logoColor=white" style="vertical-align:center" /></a> <a href="https://www.instagram.com/_sarwan_._/" target="_blank"><img alt="" src="https://img.shields.io/badge/Instagram-E4405F?style=normal&logo=instagram&logoColor=white" style="vertical-align:center" /></a> <a href="}" target="_blank"><img alt="" src="https://img.shields.io/badge/LinkedIn-0077B5?style=normal&logo=linkedin&logoColor=white" style="vertical-align:center" /></a> </p>
 
@@ -28,9 +28,8 @@ Skill Improver is a user-friendly application designed to enhance your typing sk
 
 ### Requirements:
 
-! OS: Windows 11, Windows 10, Windows 8.1, Windows 8, Windows 7  
-! Memory: 50MB  
-! HDD Space: 10 to 30MB
+! OS: Windows 11, Windows 10, Windows 8.1, Windows 8
+! HDD Space: 72 MB
 
 ---
 
@@ -49,7 +48,5 @@ Skill Improver is a user-friendly application designed to enhance your typing sk
 ### Link To Download
 
 [Links](https://skill-improver.me)
-
-![](https://skill-improver.me/skill.ico)
 
 <!-- </> with 💛 by readMD (https://readmd.itsvg.in) -->
