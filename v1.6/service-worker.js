@@ -16,7 +16,6 @@ const urlsToCache = {
   ],
   css: [
     "/files/preloader.css",
-    "/files/common.css",
   ],
   images: [
     "/files/img/skill.png",
@@ -87,7 +86,8 @@ self.addEventListener("fetch", event => {
           }
           return response;
         })
-        .catch(() => {
+        .catch(error => {
+          console.error("Failed to fetch:", error);
           return caches.match("/files/offline.html");
         });
     })

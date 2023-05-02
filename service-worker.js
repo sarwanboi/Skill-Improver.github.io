@@ -87,7 +87,8 @@ self.addEventListener("fetch", event => {
           }
           return response;
         })
-        .catch(() => {
+        .catch(error => {
+          console.error("Failed to fetch:", error);
           return caches.match("/files/offline.html");
         });
     })
