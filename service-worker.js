@@ -2,7 +2,6 @@ const CACHE_PREFIX = "my-app-cache-";
 const CACHE_VERSION = "v1";
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
 
-
 const urlsToCache = {
   html: [
     "/",
@@ -15,16 +14,12 @@ const urlsToCache = {
     "/files/404.html",
     "/files/offline.html",
   ],
-  css: [
-    "/files/preloader.css",
-    "/files/common.css",
-  ],
+  css: ["/files/preloader.css", "/files/common.css"],
   images: [
     "/files/img/skill.png",
     "/files/img/skill-128.png",
     "/files/img/skill-192.png",
     "/files/img/skill-512.png",
-    "/img/skill.ico",
     "/files/screenshots/1.png",
     "/files/screenshots/2.png",
     "/files/screenshots/3.png",
@@ -37,64 +32,63 @@ const urlsToCache = {
   ],
 };
 
-self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches
-      .open(CACHE_NAME)
-      .then((cache) => {
-        const cachePromises = Object.keys(urlsToCache).map((key) => {
-          const urls = urlsToCache[key];
-          return cache.addAll(urls);
-        });
-        return Promise.all(cachePromises);
-      })
-      .then(() => self.skipWaiting())
-      .catch((error) => {
-        console.error("Failed to add URLs to cache:", error);
-      })
-  );
+self.addEventListener("install", async (event) => {
+  try {
+    const cache = await caches.open(CACHE_NAME);
+    const cachePromises = [];
+
+    for (const [key, urls] of Object.entries(urlsToCache)) {
+      const cachePromise = cache.addAll(urls);
+      cachePromises.push(cachePromise);
+    }
+
+    await Promise.all(cachePromises);
+    await self.skipWaiting();
+  } catch (error) {
+    console.error("Failed to add URLs to cache:", error);
+  }
 });
 
-self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (
-            cacheName.startsWith(CACHE_PREFIX) &&
-            cacheName !== CACHE_NAME
-          ) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
+self.addEventListener("activate", async (event) => {
+  try {
+    const cacheNames = await caches.keys();
+
+    const deletionPromises = cacheNames.map((cacheName) => {
+      if (cacheName.startsWith(CACHE_PREFIX) && cacheName !== CACHE_NAME) {
+        return caches.delete(cacheName);
+      }
+    });
+
+    await Promise.all(deletionPromises);
+  } catch (error) {
+    console.error("Failed to delete old caches:", error);
+  }
 });
 
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches.match(event.request).then((response) => {
+    caches.match(event.request).then(async (response) => {
       if (response) {
         return response;
       }
-      return fetch(event.request)
-        .then((response) => {
-          if (response.status === 404) {
-            return caches.match("/files/404.html");
-          }
-          if (response.type === "basic" && response.ok) {
-            const responseToCache = response.clone();
-            caches.open(CACHE_NAME).then((cache) => {
-              cache.put(event.request, responseToCache);
-            });
-          }
-          return response;
-        })
-        .catch((error) => {
-          console.error("Failed to fetch:", error);
-          return caches.match("/files/offline.html");
-        });
+
+      try {
+        const response = await fetch(event.request);
+
+        if (response.status === 404) {
+          return caches.match("/files/404.html");
+        }
+
+        if (response.type === "basic" && response.ok) {
+          const cache = await caches.open(CACHE_NAME);
+          cache.put(event.request, response.clone());
+        }
+
+        return response;
+      } catch (error) {
+        console.error("Failed to fetch:", error);
+        return caches.match("/files/offline.html");
+      }
     })
   );
 });
