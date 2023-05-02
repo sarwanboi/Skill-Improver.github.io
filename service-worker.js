@@ -1,3 +1,4 @@
+// Define the cache name and URLs to cache
 const CACHE_PREFIX = "my-app-cache-";
 const CACHE_VERSION = "v1";
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
@@ -32,16 +33,12 @@ const urlsToCache = {
   ],
 };
 
+// Install the service worker and cache the URLs
 self.addEventListener("install", async (event) => {
   try {
     const cache = await caches.open(CACHE_NAME);
-    const cachePromises = [];
-
-    for (const [key, urls] of Object.entries(urlsToCache)) {
-      const cachePromise = cache.addAll(urls);
-      cachePromises.push(cachePromise);
-    }
-
+    const cachePromises = Object.values(urlsToCache)
+      .flatMap((urls) => urls.map((url) => cache.add(url)));
     await Promise.all(cachePromises);
     await self.skipWaiting();
   } catch (error) {
@@ -49,22 +46,24 @@ self.addEventListener("install", async (event) => {
   }
 });
 
+// Activate the service worker and delete old caches
 self.addEventListener("activate", async (event) => {
   try {
     const cacheNames = await caches.keys();
-
     const deletionPromises = cacheNames.map((cacheName) => {
       if (cacheName.startsWith(CACHE_PREFIX) && cacheName !== CACHE_NAME) {
         return caches.delete(cacheName);
+      } else {
+        return undefined;
       }
     });
-
-    await Promise.all(deletionPromises);
+    await Promise.all(deletionPromises.filter(Boolean));
   } catch (error) {
     console.error("Failed to delete old caches:", error);
   }
 });
 
+// Intercept network requests and respond with cached responses
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then(async (response) => {
