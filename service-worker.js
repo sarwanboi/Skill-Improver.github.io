@@ -37,8 +37,9 @@ const urlsToCache = {
 self.addEventListener("install", async (event) => {
   try {
     const cache = await caches.open(CACHE_NAME);
-    const cachePromises = Object.values(urlsToCache)
-      .flatMap((urls) => urls.map((url) => cache.add(url)));
+    const cachePromises = Object.values(urlsToCache).flatMap((urls) =>
+      urls.map((url) => cache.add(url))
+    );
     await Promise.all(cachePromises);
     await self.skipWaiting();
   } catch (error) {
