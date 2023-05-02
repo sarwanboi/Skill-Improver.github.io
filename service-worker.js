@@ -1,6 +1,7 @@
 const CACHE_PREFIX = "my-app-cache-";
-const CACHE_VERSION = "v1.0.0";
+const CACHE_VERSION = "v1";
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
+
 
 const urlsToCache = {
   html: [
@@ -36,30 +37,33 @@ const urlsToCache = {
   ],
 };
 
-self.addEventListener("install", event => {
+self.addEventListener("install", (event) => {
   event.waitUntil(
     caches
       .open(CACHE_NAME)
-      .then(cache => {
-        const cachePromises = Object.keys(urlsToCache).map(key => {
+      .then((cache) => {
+        const cachePromises = Object.keys(urlsToCache).map((key) => {
           const urls = urlsToCache[key];
           return cache.addAll(urls);
         });
         return Promise.all(cachePromises);
       })
       .then(() => self.skipWaiting())
-      .catch(error => {
+      .catch((error) => {
         console.error("Failed to add URLs to cache:", error);
       })
   );
 });
 
-self.addEventListener("activate", event => {
+self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then(cacheNames => {
+    caches.keys().then((cacheNames) => {
       return Promise.all(
-        cacheNames.map(cacheName => {
-          if (cacheName.startsWith(CACHE_PREFIX) && cacheName !== CACHE_NAME) {
+        cacheNames.map((cacheName) => {
+          if (
+            cacheName.startsWith(CACHE_PREFIX) &&
+            cacheName !== CACHE_NAME
+          ) {
             return caches.delete(cacheName);
           }
         })
@@ -68,26 +72,26 @@ self.addEventListener("activate", event => {
   );
 });
 
-self.addEventListener("fetch", event => {
+self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches.match(event.request).then(response => {
+    caches.match(event.request).then((response) => {
       if (response) {
         return response;
       }
       return fetch(event.request)
-        .then(response => {
+        .then((response) => {
           if (response.status === 404) {
             return caches.match("/files/404.html");
           }
           if (response.type === "basic" && response.ok) {
             const responseToCache = response.clone();
-            caches.open(CACHE_NAME).then(cache => {
+            caches.open(CACHE_NAME).then((cache) => {
               cache.put(event.request, responseToCache);
             });
           }
           return response;
         })
-        .catch(error => {
+        .catch((error) => {
           console.error("Failed to fetch:", error);
           return caches.match("/files/offline.html");
         });
