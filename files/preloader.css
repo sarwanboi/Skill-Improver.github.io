@@ -81,6 +81,7 @@
     opacity: 0;
   }
 }
+
 #scrollBtn {
   position: fixed;
   bottom: 20px;
@@ -93,11 +94,13 @@
   cursor: pointer;
   padding: 15px;
   border-radius: 50%;
-  display: none; /* hide the button by default */
+  display: none;
+  /* hide the button by default */
 }
 
 #scrollBtn.up {
-  transform: rotate(180deg); /* rotate the button for "up" state */
+  transform: rotate(180deg);
+  /* rotate the button for "up" state */
 }
 
 #scrollBtn:hover {

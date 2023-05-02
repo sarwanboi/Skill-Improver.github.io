@@ -29,7 +29,6 @@ const urlsToCache = {
     "/files/screenshots/6.png",
     "/files/screenshots/7.png",
     "/files/screenshots/8.png",
-    "https://mdbcdn.b-cdn.net/img/new/slides/003.webp",
   ],
 };
 
