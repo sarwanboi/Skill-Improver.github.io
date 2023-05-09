@@ -40,6 +40,7 @@
     <!-- Title of the page -->
     <title>Skill Improver Official Website</title>
     <script src="files/stats.js"></script>
+
 </head>
 
 <body style="--i:0;">
@@ -276,7 +277,9 @@
             <div class="row">
                 <div class="col-md-6">
                     <h3 class="mb-3">Get in Touch</h3>
-                    <form action="https://formsubmit.co/rangersarwan@gmail.com" method="POST">
+                    <form
+                        action="https://formsubmit.co/rangersarwan@gmail.com?_apikey=98b1eb63090053e3111a0fc7fafd6e3cbf4dc31d5406429b1b4dfb0434b58841"
+                        method="POST">
                         <div class="form-group mb-3">
                             <label for="name">Name</label>
                             <input type="text" class="form-control" id="name" name="name" required>
@@ -294,10 +297,11 @@
                             <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                         </div>
                         <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_subject" value="New submission!">
+                        <input type="hidden" name="_subject" value="Skill Improver!">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_next" value="https://skill-improver.me/">
-                        <button type="submit" class="btn btn-primary animated-button">
+                        <button type="submit" class="btn btn-primary animated-button" aria-label="Send message"
+                            onclick="submitForm()">
                             Send Message
                             <span class="animated-button-icon">
                                 <i class="fas fa-envelope"></i>
@@ -332,7 +336,6 @@
         <p>Your message has been sent successfully.</p>
     </div>
 
-
     <!-- Footer section -->
     <footer class="bg-dark text-center text-white">
         <div class="container p-4 pb-0">
@@ -347,23 +350,25 @@
                     <i class="fab fa-github"></i>
                 </a>
             </section>
-            <div class="text-center p-3" style="background-color: transparent;">
-            <p>You are visitor number <span id="visitCount"></span> from <span id="country"></span>.</p>
-             </div>
+            <div class="text-center p-3" id="counter">
+                <p>You are visitor number <span id="visitCount"></span> from <span id="country"></span>.</p>
+            </div>
         </div>
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            <p>
-                Copyright © 2023,
-                <a class="text-white text-decoration-none" href="https://sarwanboi.github.io/sarwanportfolio.github.io/"
-                    aria-label="Visit the website of Sarwan Yadav, the developer of this website">
-                    Sarwan Yadav.
-                </a>
-                All rights reserved.
-            </p>
+        <hr style="border-top: 1px solid #8c8c8c;">
+        <div class="container py-3">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-left">
+                    <p>&copy; 2023 Skill Improver. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <p>Website by <a href="https://sarwanboi.github.io/sarwanportfolio.github.io/"
+                            aria-label="Visit the website of Sarwan Yadav, the developer of this website">Sarwan
+                            Yadav</a></p>
+                </div>
+            </div>
         </div>
     </footer>
-    <!-- End footer section -->
+
 
     <!-- Button to scroll down the page -->
     <button id="scrollBtn" type="button">
@@ -371,15 +376,6 @@
     </button>
 
     <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-    <script>
-      // Get the visit count and country from Local Storage
-      const visitCount = localStorage.getItem('visitCount') || 0;
-      const country = localStorage.getItem('country') || 'unknown';
-
-      // Display the visit count and country on the HTML page
-      document.getElementById('visitCount').textContent = visitCount;
-      document.getElementById('country').textContent = country;
-    </script>
 
     <!--Script Set 1-->
     <script>
@@ -503,6 +499,33 @@
             }
         });
     </script>
+    <!--Script Set 3-->
+    <script>
+        // Get the visit count and country from Local Storage
+        const visitCount = localStorage.getItem('visitCount') || 0;
+        const country = localStorage.getItem('country') || 'unknown';
+
+        // Display the visit count and country on the HTML page
+        document.getElementById('visitCount').textContent = visitCount;
+        document.getElementById('country').textContent = country;
+    </script>
+    <script>
+        function submitForm() {
+            var form = document.getElementById('my-form');
+            var formData = new FormData(form);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', form.action, true);
+            xhr.setRequestHeader('_apikey', '98b1eb63090053e3111a0fc7fafd6e3cbf4dc31d5406429b1b4dfb0434b58841');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log(xhr.responseText);
+                    // You can add a success message or redirect the user to a thank you page here
+                }
+            };
+            xhr.send(formData);
+        }
+    </script>
+
     <!-- Service Worker Script-->
     <script>
         // This script checks if the browser supports service worker API and registers the service worker located at /service-worker.js with a scope of '/'. It logs the registration status and any errors in the console.

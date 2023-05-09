@@ -297,25 +297,94 @@
   margin: 0;
 }
 
-/* Apply animation to footer */
+/* Footer section */
 footer {
-  animation-name: slideInUp;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-#visitCount {
-  font-weight: bold;
+  background-color: #212529;
   color: #fff;
+}
+
+footer a {
+  color: #e3e622;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #007bff;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+footer .btn-floating {
+  background-color: #fff;
+  color: #212529;
+}
+
+footer .btn-floating:hover {
   background-color: #007bff;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
+  color:#FFF ;
 }
-#country {
-  font-weight: bold;
+
+footer hr {
+  border-color: #8c8c8c;
+}
+
+footer .container {
+  max-width: 960px;
+}
+
+footer .text-center {
+  text-align: center;
+}
+
+footer .text-md-left {
+  text-align: left;
+}
+
+footer .text-md-right {
+  text-align: right;
+}
+
+#counter {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#counter p {
   color: #fff;
-  background-color: #28a745;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
+  font-size: 18px;
+  margin-bottom: 0;
+  display: flex;
+  /* added to center content horizontally and vertically */
+  justify-content: center;
+  align-items: center;
+}
+
+#counter p span {
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+#counter #visitCount {
+  color: #e3e622;
+  /* yellow color for user count */
+}
+
+#counter #country {
+  color: #007bff;
+  /* blue color for user country */
 }
 
 
