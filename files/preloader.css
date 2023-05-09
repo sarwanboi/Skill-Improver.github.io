@@ -82,6 +82,8 @@
   }
 }
 
+
+
 #scrollBtn {
   position: fixed;
   bottom: 20px;
@@ -301,6 +303,22 @@ footer {
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
+#visitCount {
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+#country {
+  font-weight: bold;
+  color: #fff;
+  background-color: #28a745;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+
 
 .popup-container {
   display: none;

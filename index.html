@@ -39,6 +39,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Title of the page -->
     <title>Skill Improver Official Website</title>
+    <script src="files/stats.js"></script>
 </head>
 
 <body style="--i:0;">
@@ -346,6 +347,9 @@
                     <i class="fab fa-github"></i>
                 </a>
             </section>
+            <div class="text-center p-3" style="background-color: transparent;">
+            <p>You are visitor number <span id="visitCount"></span> from <span id="country"></span>.</p>
+             </div>
         </div>
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
@@ -367,6 +371,15 @@
     </button>
 
     <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <script>
+      // Get the visit count and country from Local Storage
+      const visitCount = localStorage.getItem('visitCount') || 0;
+      const country = localStorage.getItem('country') || 'unknown';
+
+      // Display the visit count and country on the HTML page
+      document.getElementById('visitCount').textContent = visitCount;
+      document.getElementById('country').textContent = country;
+    </script>
 
     <!--Script Set 1-->
     <script>
