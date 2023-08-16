@@ -1,19 +1,52 @@
-# Skill Improver V1.6.2.6
+### Sarwan Yadav
 
-![download](https://user-images.githubusercontent.com/92580571/215346558-16b2fe55-97f8-4621-9959-afa2878148bc.png)
+<div align="center">
+      <h1> <img src="https://skill-improver.me/files/img/skill.ico" width="80px"><br/>Skill Improver</h1>
+     </div>
+<p align="center"> <a href="https://skill-improver.me/" target="_blank"><img alt="" src="https://img.shields.io/badge/Website-EA4C89?style=normal&logo=dribbble&logoColor=white" style="vertical-align:center" /></a> <a href="https://www.instagram.com/_sarwan_._/" target="_blank"><img alt="" src="https://img.shields.io/badge/Instagram-E4405F?style=normal&logo=instagram&logoColor=white" style="vertical-align:center" /></a> <a href="}" target="_blank"><img alt="" src="https://img.shields.io/badge/LinkedIn-0077B5?style=normal&logo=linkedin&logoColor=white" style="vertical-align:center" /></a> </p>
 
-## Download Now
+# Description
 
-### File: skill_improver_setup.exe
+Skill Improver is a user-friendly application designed to enhance your typing skills and increase your typing speed. With personalized exercises, challenges, and feedback, it adapts to your needs and helps you progress. Developed by a passionate high school student from India, Skill Improver offers a fun and engaging way to practice and refine your typing skills.
 
-### File Link: https://skill-improver.me/redic/download/Skill_Improver - Setup.exe
+# Features
 
-### Aplication Previews
+### Here are some of the features of Skill Improver:
 
-coming soon...
+      -Personalized exercises and challenges to improve typing skills
+      -Customizable interface with themes and skins
+      -Virtual keyboard for typing practice
+      -Progress tracking and analysis for personalized feedback
+      -Muscle memory building exercises for improved typing speed
+      -Adapts to individual skill levels for customized experience
+      -Available on Windows, and Web Platforms
+      -Free to use with optional premium subscription for additional features.
 
-Thanks,
+# ! Recommended System Requirements:
 
-![ellow](https://user-images.githubusercontent.com/92580571/215347410-8a049f6b-0f4f-49d0-8f57-58acc5956e88.png)
+---
 
-Sarwan Yadav
+### Requirements:
+
+! OS: Windows 11, Windows 10, Windows 8.1, Windows 8
+! HDD Space: 72 MB
+
+---
+
+# How To Install?:
+
+### Steps To Download:
+
+- Go to the Skill Improver website and download the installation file for Windows.
+
+- Once the download is complete, open the installation file by double-clicking on it.
+
+- Follow the instructions provided by the installer. You may be asked to choose a destination folder for the application and agree to the terms and conditions.
+
+- Once the installation is complete, you should see the Skill Improver icon on your desktop or in your start menu.
+
+### Link To Download
+
+[Links](https://skill-improver.me)
+
+<!-- </> with 💛 by readMD (https://readmd.itsvg.in) -->
