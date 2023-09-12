@@ -47,6 +47,4 @@ Skill Improver is a user-friendly application designed to enhance your typing sk
 
 ### Link To Download
 
-[Links](https://skill-improver.me)
-
-<!-- </> with 💛 by readMD (https://readmd.itsvg.in) -->
+[Download Now From Official Website ](https://skill-improver.me)
