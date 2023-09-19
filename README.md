@@ -28,7 +28,7 @@ Skill Improver is a user-friendly application designed to enhance your typing sk
 
 ### Requirements:
 
-! OS: Windows 11, Windows 10, Windows 8.1, Windows 8
+! OS: Windows 11, Windows 10, Windows 8.1, Windows 8 <br>
 ! HDD Space: 72 MB
 
 ---
@@ -47,6 +47,4 @@ Skill Improver is a user-friendly application designed to enhance your typing sk
 
 ### Link To Download
 
-[Links](https://skill-improver.me)
-
-<!-- </> with 💛 by readMD (https://readmd.itsvg.in) -->
+[Download Now From Official Website ](https://skill-improver.me)
