@@ -45,6 +45,7 @@ Skill Improver is a user-friendly application designed to enhance your typing sk
 
 - Once the installation is complete, you should see the Skill Improver icon on your desktop or in your start menu.
 
-### Link To Download
+### Download Now From Official Website 
 
-[Download Now From Official Website ](https://skill-improver.me)
+[Download]
+(https://skill-improver.me)
