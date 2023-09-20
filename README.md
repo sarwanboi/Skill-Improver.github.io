@@ -14,13 +14,12 @@ Skill Improver is a user-friendly application designed to enhance your typing sk
 ### Here are some of the features of Skill Improver:
 
       -Personalized exercises and challenges to improve typing skills
-      -Customizable interface with themes and skins
-      -Virtual keyboard for typing practice
+      -Modern interface
       -Progress tracking and analysis for personalized feedback
       -Muscle memory building exercises for improved typing speed
       -Adapts to individual skill levels for customized experience
-      -Available on Windows, and Web Platforms
-      -Free to use with optional premium subscription for additional features.
+      -Available on Windows
+      -Free to use...
 
 # ! Recommended System Requirements:
 
@@ -47,5 +46,5 @@ Skill Improver is a user-friendly application designed to enhance your typing sk
 
 ### Download Now From Official Website 
 
-[Download From -]
-(https://skill-improver.me)
+[Download:
+(https://skill-improver.me)]
