@@ -21,17 +21,20 @@ body {
 }
 
 .container {
-    width: 600px;
+    width: 80%; /* Adjusted width for better responsiveness */
+    max-width: 600px; /* Added max-width for larger screens */
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.top p{
-    font-size: 16px;
-    width: 160px;
+
+.top p {
+    font-size: 1rem; /* Use relative units for font size */
+    width: 80%; /* Adjusted width for better responsiveness */
     text-align: center;
-    }
+}
+
 .top {
     display: flex;
     align-items: center;
@@ -43,17 +46,19 @@ hr {
     width: 100px;
     color: white;
     border-radius: 5px;
-    margin: 0 15px
+    margin: 0 15px;
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 3rem; /* Use relative units for font size */
     text-align: center;
     font-weight: 500;
     letter-spacing: 2px;
 }
-h3{
+
+h3 {
     margin-bottom: 10px;
+    font-size: 1.2rem; /* Use relative units for font size */
 }
 
 .social-icons {
@@ -68,43 +73,35 @@ a {
 }
 
 i {
-    font-size: 35px;
+    font-size: 2rem; /* Use relative units for icon size */
     margin: 10px;
 }
 
-@media only screen 
-and (max-width:360px) {
-   
-    .container{
-        width:40%;
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjusted width for smaller screens */
     }
-    p{
-        font-weight: bolder;
+
+    .top p {
+        width: 100%; /* Full width for smaller screens */
     }
-    .to{
-        align-items: center;
-    }
+
     h1 {
-        font-size: 35px; 
-        text-align: center;
-        margin-left: 10px;
-        font-weight: 900;
+        font-size: 2rem; /* Adjusted font size for smaller screens */
     }
-    h3{
-        font-size:10px;
-        display: inline;
+
+    h3 {
+        font-size: 1rem; /* Adjusted font size for smaller screens */
+        display: block;
         clear: both;
     }
+
     a {
-        display: inline;
-        font-size: 5px;
-        margin-left: 15px;
-        align-items: center;
-        justify-content: baseline;
+        font-size: 0.8rem; /* Adjusted font size for smaller screens */
+        margin-left: 0;
     }
+
     .social-icons {
-        display: inline;
-        margin-top: 250px;
-        align-self: center;
+        margin-top: 20px; /* Adjusted margin for smaller screens */
     }
 }
