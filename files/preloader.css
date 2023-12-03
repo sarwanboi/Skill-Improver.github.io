@@ -1,3 +1,42 @@
+/* General Styles */
+#download {
+  background-color: #FFF;
+}
+
+#get-in-touch {
+  background-color: #eee;
+  color: #000;
+}
+
+/* Carousel Control Styles */
+.carousel-control-prev,
+.carousel-control-next {
+  color: #000000;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #000000;
+}
+
+/* Common Animation Styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Introduction Section Animation */
+#introduction,
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+
 .preloader {
   position: fixed;
   top: 0;
@@ -323,7 +362,7 @@ footer .btn-floating {
 
 footer .btn-floating:hover {
   background-color: #007bff;
-  color:#FFF ;
+  color: #FFF;
 }
 
 footer hr {
